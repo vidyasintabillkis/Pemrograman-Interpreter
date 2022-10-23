@@ -101,12 +101,16 @@ def menu3() :
       menuMerk = {1:stapleFood[pilihMenu2][j],2:Drink[pilihMenu2][j],3:Snack[pilihMenu2][j],4:frozenFood[pilihMenu2][j],5:Toiletries[pilihMenu2][j]}
       price = {1:staplePrice[pilihMenu2][j+1],2:drinkPrice[pilihMenu2][j+1],3:snackPrice[pilihMenu2][j+1],4:frozenPrice[pilihMenu2][j+1],5:toiletPrice[pilihMenu2][j+1]}
       print(str(j+1)+".",menuMerk[pilihMenu1],"\t\t\t",price[pilihMenu1])
+    print("-----------------------")
+    print("<BACK = 0>")
 
   global pilihMenu3 
   while True :
       try :       
         pilihMenu3 = int(input("Enter Section\t : "))
-        if pilihMenu3<=0 or pilihMenu3>5 :
+        if pilihMenu3==0 :
+          menu2()
+        elif pilihMenu3<=0 or pilihMenu3>5 :
           raise ValueError
         print("")
         break
